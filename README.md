@@ -353,7 +353,7 @@ your readme to let people know that your code is using the standard style.
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ```md
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Greenkeeper badge](https://badges.greenkeeper.io/standard/standard.svg)](https://greenkeeper.io/)
 ```
 
 ## I disagree with rule X, can you change it?
