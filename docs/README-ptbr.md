@@ -13,10 +13,15 @@
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
 </p>
 
+<h5 align="center">
+  Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://speakeasy.co/?utm_source=standardjs.com&utm_medium=sponsorship&utm_campaign=standard"><img src="https://speakeasy.co/logo-text.png" alt="Speakeasy" height=50 valign="middle"></a>
+</h5>
+
 <p align="center">
   <a href="/docs/README-en.md">English</a> •
   <a href="/docs/README-esla.md">Español (Latinoamérica)</a> •
   <a href="/docs/README-fr.md">Français</a> •
+  <a href="/docs/README-id.md">Bahasa Indonesia</a> •
   <a href="/docs/README-iteu.md">Italiano (Italian)</a> •
   <a href="/docs/README-ja.md">日本語 (Japanese)</a> •
   <a href="/docs/README-kokr.md">한국어 (Korean)</a> •
@@ -24,8 +29,6 @@
   <a href="/docs/README-zhcn.md">简体中文 (Simplified Chinese)</a> •
   <a href="/docs/README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
-
-<br>
 
 Sem ter que tomar decisões; Sem gerenciar `.eslintrc`, `.jshintrc`, ou `.jscsrc` . Funciona logo de cara.
 
@@ -244,19 +247,19 @@ Selecione o registro da extensão do **["Standard Code Style"][brackets-1]**.
 
 #### [Visual Studio Code](https://code.visualstudio.com/)
 
-Instale **[vscode-standardjs][vscode-1]**. (Inclui suporte para formatação automática.)
+Instale **[vscode-standard][vscode-1]**. (Inclui suporte para formatação automática.)
 
 Para snippets de React, instale  **[vscode-react-standard][vscode-2]**.
 
-[vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
-[vscode-2]: https://marketplace.visualstudio.com/items/TimonVS.ReactSnippetsStandard
+[vscode-1]: https://marketplace.visualstudio.com/items?itemName=standard.vscode-standard
+[vscode-2]: https://marketplace.visualstudio.com/items?itemName=TimonVS.ReactSnippetsStandard
 
 #### [WebStorm/PhpStorm][webstorm-1]
 
 Ambos PhpStorm e WebStorm podem ser  [configurados para Standard Style][webstorm-2].
 
 [webstorm-1]: https://www.jetbrains.com/webstorm/
-[webstorm-2]: https://github.com/standard/standard/blob/master/docs/webstorm.md
+[webstorm-2]: webstorm.md
 
 ## FAQ
 
@@ -269,7 +272,7 @@ Esse módulo te faz economizar tempo de 2 formas:
 - **Zero configuração.** A forma mais fácil de forçar consistência de estilo no seu projeto. É só tacar lá e pronto.
 - **Captura erros de estilo antes de serem enviados em PR's.** Salva um tempo precioso de code review eliminando vai-e-vem entre mantenedor  e contribuínte.
 
-Adotar o  estilo `standard` significa elevar a importância da clareza de código e convenções de comunidade a um patamar acima do estilo pessoal. Pode não fazer sentido para TODOS os projetos e culturas de desenvolvimento, porém, o opens ource pode ser um lugar hostil para novatos. Deixar as expectativas do contribuínte claras e automatizadas deixa o projeto mais saudável.
+Adotar o  estilo `standard` significa elevar a importância da clareza de código e convenções de comunidade a um patamar acima do estilo pessoal. Pode não fazer sentido para TODOS os projetos e culturas de desenvolvimento, porém, o open source pode ser um lugar hostil para novatos. Deixar as expectativas do contribuínte claras e automatizadas deixa o projeto mais saudável.
 
 ### Discordo da regra X, você pode mudá-la?
 
@@ -281,10 +284,10 @@ Não. O ponto principal do `standard` é evitar [bikeshedding][bikeshedding] sob
 
 Claro que não! O estilo aqui disposto não é afiliado com nenhum grupo de padrões web oficiais, e é por isso que esse repo se chama `standard/standard` e não `ECMA/standard`.
 
-A palavra  "standard" tem muito mais significado do que só "web standard" :-) Por exemplo:
+A palavra "standard" tem muito mais significado do que só "web standard" :-) Por exemplo:
 
 - Esse módulo ajuda a manter seu código num alto *padrão de qualidade*.
-- Esse módulo assegura que novos contribuíntes sigam alguns  *padrões de estilo* básicos.
+- Esse módulo assegura que novos contribuíntes sigam alguns *padrões de estilo* básicos.
 
 ### Existe um formatador automático?
 
@@ -296,14 +299,13 @@ Para economizar seu tempo, `standard` solta uma mensagem ("Run `standard --fix` 
 problems.") quando detecta problemas que podem ser corrigidos manualmente.
 
 Alternativamente, se seu código é feito apenas de ES5, você pode tentar usar
-[`standard-format`][standard-format] (um pacote separado), mas provavlemente não vai ser mantido pois  `standard --fix` funciona muito bem, e isso faz com que não precisemos manter duas ferramentas com regras de configuração separadas.
+[`standard-format`][standard-format] (um pacote separado), mas provavelmente não vai ser mantido pois `standard --fix` funciona muito bem, e isso faz com que não precisemos manter duas ferramentas com regras de configuração separadas.
 
 [standard-format]: https://github.com/maxogden/standard-format
 
 ### Como ignoro arquivos?
 
-Os caminhos `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, pastas/arquivos escondidos (começando com `.`), e todos os arquivos nos padrões no
-`.gitignore` da raiz do projeto são automaticamente ignorados.
+Os caminhos `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, pastas/arquivos escondidos (começando com `.`), e todos os arquivos nos padrões no `.gitignore` da raiz do projeto são automaticamente ignorados.
 
 Às vezes você precisa ignorar algumas pastas adicionais ou arquivos minificados específicos. Para fazer isso, adicione uma propriedade `standard.ignore` no `package.json`:
 
@@ -322,7 +324,6 @@ Os caminhos `node_modules/**`, `*.min.js`, `bundle.js`, `coverage/**`, pastas/ar
 
 Em casos raros, você vai precisar quebrar uma regra e esconder um warning gerado pelo `standard`.
 
-
 JavaScript Standard Style usa o [`eslint`](http://eslint.org/) por baixo dos panos, sendo assim, você pode esconder algum aviso da mesma forma que você faria se utilizasse `eslint` diretamente.
 
 Para receber output verboso (para que você descubra que regra em particular precisa ignorar), execute:
@@ -333,19 +334,19 @@ Error: Use JavaScript Standard Style
   routes/error.js:20:36: 'file' was used before it was defined. (no-use-before-define)
 ```
 
-Desabilite **todas as regras** oem uma linha específica:
+Desabilite **todas as regras** em uma linha específica:
 
 ```js
 file = 'Eu sei bem o que tô fazendo' // eslint-disable-line
 ```
 
-Ou, desabilite  **apenas** na regra `"no-use-before-define"`:
+Ou, desabilite **apenas** na regra `"no-use-before-define"`:
 
 ```js
 file = 'Eu sei bem o que tô fazendo' // eslint-disable-line no-use-before-define
 ```
 
-Ou, desabilite a regra  `"no-use-before-define"` em  **várias linhas**:
+Ou, desabilite a regra `"no-use-before-define"` em  **várias linhas**:
 
 ```js
 /* eslint-disable no-use-before-define */
@@ -365,7 +366,7 @@ Para fazer com que o  `standard` (e outros humanos que lerão seu código) saiba
 /* global myVar1, myVar2 */
 ```
 
-Se você possui centenas de arquivps, adicionar comentários em cada um pode ficar um saco; Nesses casos, você pode adicionar isso ao `package.json`:
+Se você possui centenas de arquivos, adicionar comentários em cada um pode ficar um saco; Nesses casos, você pode adicionar isso ao `package.json`:
 
 ```json
 {
@@ -380,17 +381,17 @@ Se você possui centenas de arquivps, adicionar comentários em cada um pode fic
 Antes de usar um custom parser, considere se a complexidade a mais no seu código faz com que o processo valha a pena.
 
 `standard` suporta custom JS parsers. Para usar um custom parser, instale via npm
-(por exemplo: `npm install babel-eslint`) e adicione isso ao seu `package.json`:
+(por exemplo: `npm install @babel/eslint-parser`) e adicione isso ao seu `package.json`:
 
 ```json
 {
   "standard": {
-    "parser": "babel-eslint"
+    "parser": "@babel/eslint-parser"
   }
 }
 ```
 
-Se você está usando  `standard` de forma global (instalou com `-g`), você vai precisar instalar  `babel-eslint` globalmente como `npm install babel-eslint -g`.
+Se você está usando  `standard` de forma global (instalou com `-g`), você vai precisar instalar  `@babel/eslint-parser` globalmente como `npm install @babel/eslint-parser -g`.
 
 ### Posso usar uma linguagem variante de JavaScript, tipo Flow?
 
@@ -401,7 +402,7 @@ Antes de usar uma variante de JS customizada, considere se a complexidade a mais
 ```json
 {
   "standard": {
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     "plugins": [
       "flowtype"
     ]
@@ -414,7 +415,7 @@ Se você está usando `standard` globalmente (instalou com `-g`), você também 
 
 ### Você pode tornar regra X configurável?
 
-Não. O objetivo do  `standard` é economizar seu tempo escolhendo regras razoáveis para que você gaste seu tempo resolvendo problemas de verdade. Se você realmente quer configurar centenas de regras ESLint individualmente, você sempre pode usar `eslint` diretamente.
+Não. O objetivo do `standard` é economizar seu tempo escolhendo regras razoáveis para que você gaste seu tempo resolvendo problemas de verdade. Se você realmente quer configurar centenas de regras ESLint individualmente, você sempre pode usar `eslint` diretamente.
 
 Se você apenas quer trocar algumas regras, considere usar
 [essa configuração compartilhável](https://github.com/standard/eslint-config-standard) e jogue suas mudanças em cima.
@@ -439,7 +440,7 @@ Para ter suporte a mocha nos seus arquivos de teste, adicione isso no começo do
 /* eslint-env mocha */
 ```
 
-Onde  `mocha` pode ser  `jasmine`, `qunit`, `phantomjs`, e por aí vai. Para ver a lista completa, cheque a documentação para
+Onde `mocha` pode ser  `jasmine`, `qunit`, `phantomjs`, e por aí vai. Para ver a lista completa, cheque a documentação para
 [especificar ambientes](http://eslint.org/docs/user-guide/configuring.html#specifying-environments) do ESLint.
 Para uma lista de quais variávies globais estão disponíveis nesses ambientes, cheque o módulo npm [globals](https://github.com/sindresorhus/globals/blob/master/globals.json) .
 
@@ -455,7 +456,7 @@ function xargs-r() {
   # Portable version of "xargs -r". The -r flag is a GNU extension that
   # prevents xargs from running if there are no input files.
   if IFS= read -r -d $'\n' path; then
-    { echo "$path"; cat; } | xargs $@
+    echo "$path" | cat - | xargs "$@"
   fi
 }
 git diff --name-only --cached --relative | grep '\.jsx\?$' | sed 's/[^[:alnum:]]/\\&/g' | xargs-r -E '' -t standard
@@ -476,7 +477,7 @@ PreCommit:
 
 ### Como eu deixo o output todo coloridinho e *bonitinho*?
 
-O output de fábrica é simples e direto, mas se você gosta de coisinhas brilhantes, instale  [snazzy](https://www.npmjs.com/package/snazzy):
+O output de fábrica é simples e direto, mas se você gosta de coisinhas brilhantes, instale [snazzy](https://www.npmjs.com/package/snazzy):
 
 ```
 npm install snazzy
@@ -505,7 +506,7 @@ var opts = {
   globals: [],  // declaração de variáveis globais
   plugins: [],  // plugins eslint
   envs: [],     // ambiente eslint
-  parser: ''    // js parser (e.g. babel-eslint)
+  parser: ''    // js parser (e.g. @babel/eslint-parser)
 }
 ```
 
@@ -540,7 +541,7 @@ var opts = {
   globals: [],  // variáveis globais para declarar
   plugins: [],  // plugins eslint
   envs: [],     // ambiente eslint
-  parser: ''    // js parser (e.g. babel-eslint)
+  parser: ''    // js parser (e.g. @babel/eslint-parser)
 }
 ```
 
@@ -548,14 +549,14 @@ O `callback` vai ser chamado com os objetos `Error` e `results`:
 
 ## Contribuições
 
-Contribuições são bem-vindas! Cheque o [issues](https://github.com/standard/standard/issues) ou os [PRs](https://github.com/standard/standard/pulls), e faça o seu próprio se quiser algo que não encontra aqui.
+Contribuições são bem-vindas! Cheque o [issues](https://github.com/standard/standard/issues) ou os [PRs](https://github.com/standard/standard/pulls), e faça o seu próprio se quiser algo que não encontrou aqui.
 
 Junte-se ao `#standard` no freenode.
 
 ### Quero contribuir com o `standard`. Quais packages eu devo conhecer?
 
 - **[standard](https://github.com/standard/standard)** - esse repo
-  - **[standard-engine](https://github.com/standard/standard-engine)** - Motor cli para regras arbritrárias de ESLint
+  - **[standard-engine](https://github.com/standard/standard-engine)** - Motor cli para regras arbitrárias de ESLint
   - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - Regras ESLint para  `standard`
   - **[eslint-plugin-standard](https://github.com/standard/eslint-plugin-standard)** - Regras  ESLint custom  para `standard` (Não fazem parte do core do ESLint)
   - **[eslint](https://github.com/eslint/eslint)** - O linter que move o `standard`
